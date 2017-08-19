@@ -2,7 +2,7 @@
   "name": "pup",
   "private": true,
   "scripts": {
-    "start": "meteor --settings settings-development.json",
+    "start": "meteor debug --settings settings-development.json",
     "test": "jest"
   },
   "dependencies": {

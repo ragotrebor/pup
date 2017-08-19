@@ -28,6 +28,9 @@ import Footer from '../../components/Footer/Footer';
 import Terms from '../../pages/Terms/Terms';
 import Privacy from '../../pages/Privacy/Privacy';
 import ExamplePage from '../../pages/ExamplePage/ExamplePage';
+import VapeItems from '../../pages/VapeItems/VapeItems';
+import NewVapeItems from '../../pages/NewVapeItem/NewVapeItem';
+
 
 import './App.scss';
 
@@ -53,6 +56,8 @@ const App = props => (
           <Authenticated exact path="/documents/new" component={NewDocument} {...props} />
           <Authenticated exact path="/documents/:_id" component={ViewDocument} {...props} />
           <Authenticated exact path="/documents/:_id/edit" component={EditDocument} {...props} />
+          <Authenticated exact path="/vapeitems" component={VapeItems} {...props} />
+          <Authenticated exact path="/vapeitems/new" component={NewVapeItems} {...props} />
           <Authenticated exact path="/profile" component={Profile} {...props} />
           <Public path="/signup" component={Signup} {...props} />
           <Public path="/login" component={Login} {...props} />

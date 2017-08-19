@@ -1,0 +1,24 @@
+import { Mongo } from 'meteor/mongo';
+import SimpleSchema from 'simpl-schema';
+
+const Collection = new Mongo.Collection('Collection');
+
+Collection.allow({
+  insert: () => false,
+  update: () => false,
+  remove: () => false,
+});
+
+Collection.deny({
+  insert: () => true,
+  update: () => true,
+  remove: () => true,
+});
+
+Collection.schema = new SimpleSchema({
+  /* Add your schema rules to this object. */
+});
+
+Collection.attachSchema(Collection.schema);
+
+export default Collection;
